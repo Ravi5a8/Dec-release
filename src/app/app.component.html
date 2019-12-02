@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-10">
+<form [formGroup]='fg' class="container"> 
+  
+  <div class="jumbotron">
+  <h3>StudentDetails</h3>
+  <div formArrayName = 'Farray' *ngFor= "let a of getFarr.controls; let i=index">
+    <div [formGroupName] = i>
+  <div>
+    <label for="roleNo">RoleNo </label><br>
+    <input type="number"  formControlName="roleNo">
+     </div>
+        
+  <div formGroupName="studentDetails">
+    <div>
+    <label for="name">Name   </label><br>
+    <input type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="Class">Class  </label><br>
+    <input type="text" formControlName="class">
+  </div><br>
+<div>
+    <label for="Gender">Gender </label><br>
+    <input type="radio" formControlName="gender" value="Male" checked>Male
+    <input type="radio" formControlName="gender" value="Female">Female
+    <input type="radio" formControlName="gender" value="other">other
+  </div><br>
+<div>
+    <label for="emailId">email_Id </label><br>
+    <input type="text" formControlName="emailId">
+  </div>
+<div>
+    <label for="contactNo">contactNo </label><br>
+    <input type="number" formControlName="contactNo">
+  </div>
+  </div>
+  <div formGroupName="address">
+    <label for="addressLine1">AddressLine1 </label><br>
+    
+    <textarea name="address1" id="address1" cols="30" rows="10"></textarea><br>
+    <label for="addressLine2">AddressLine2 </label><br>
+    <textarea name="address2" id="address2" cols="30" rows="10"></textarea>
+  </div>
+</div>
+</div>
+</div>
+<!-- </div> -->
+</form>
+</div>
+</div>
